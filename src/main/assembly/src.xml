@@ -44,10 +44,6 @@
       <source>${basedir}/src/main/resources/log4j.xml</source>
       <outputDirectory>lib</outputDirectory>
     </file>
-    <file>
-      <source>${basedir}/bin/run-wikipedia-zk-application.sh</source>
-      <outputDirectory>bin</outputDirectory>
-    </file>
   </files>
   <dependencySets>
     <dependencySet>
