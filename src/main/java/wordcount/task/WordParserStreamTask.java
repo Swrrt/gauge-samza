@@ -32,6 +32,7 @@ import org.apache.samza.task.TaskCoordinator;
 public class WordParserStreamTask implements StreamTask {
     private static final SystemStream OUTPUT_STREAM = new SystemStream("kafka", "wordcount-word");
     @SuppressWarnings("unchecked")
+    @Override
     public void process(IncomingMessageEnvelope envelope, MessageCollector collector, TaskCoordinator coordinator){
         Map<String, Object> jsonObject = (Map<String, Object>) envelope.getMessage();
         String raw = (String)jsonObject.get("raw");
