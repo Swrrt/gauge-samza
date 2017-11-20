@@ -40,7 +40,7 @@ import org.apache.samza.task.TaskCoordinator;
 import org.apache.samza.task.WindowableTask;
 
 public class WordCountStreamTask implements InitableTask, StreamTask, WindowableTask {
-    private static final SystemStream OUTPUT_STREAM = new SystemStream("Kafka", "wordcount-count");
+    private static final SystemStream OUTPUT_STREAM = new SystemStream("kafka", "wordcount-count");
     private KeyValueStore<String, Integer> store;
     private Map<String, Integer> counts = new HashMap<String, Integer>();
     public void init(Config config, TaskContext taskContext) throws Exception {
