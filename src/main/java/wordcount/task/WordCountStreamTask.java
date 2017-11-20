@@ -44,7 +44,7 @@ public class WordCountStreamTask implements InitableTask, StreamTask, Windowable
     private KeyValueStore<String, Integer> store;
     private Map<String, Integer> counts = new HashMap<String, Integer>();
     public void init(Config config, TaskContext taskContext) throws Exception {
-        this.store = (KeyValueStore<String, Integer>) taskContext.getStore("wordcount-count ");
+        //this.store = (KeyValueStore<String, Integer>) taskContext.getStore("wordcount-count ");
         counts = new HashMap<String, Integer>();
     }
     @Override
