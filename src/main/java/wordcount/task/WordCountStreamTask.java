@@ -54,7 +54,7 @@ public class WordCountStreamTask implements InitableTask, StreamTask, Windowable
         Integer count = counts.get(word);
         if (count == null) count = 0;
         count ++;
-        counts.put("word", count);
+        counts.put(word, count);
     }
     @Override
     public void window(MessageCollector collector, TaskCoordinator coordinator) {
